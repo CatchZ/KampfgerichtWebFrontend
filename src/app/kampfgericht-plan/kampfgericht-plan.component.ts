@@ -14,6 +14,7 @@ export class KampfgerichtPlanComponent implements OnInit {
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+   
    this.testData= this.dataService.getTestData();
   }
 

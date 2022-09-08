@@ -7,11 +7,12 @@ import { HttpClient } from '@angular/common/http';
  * Service to retriev Data
  */
 export class DataService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getTestData(){
-    return this.http.get<{ Id:number,Text:string}[]>('/assets/testData.json');
-    //return this.http.get<{Id:number;Text:string}[]>('http://localhost:3000/content');
+  getTestData() {
+   // return this.http.get<{ Id: number, Text: string }[]>(
+     // '/assets/testData.json'
+    //);
+   return this.http.get<{Id:number;Text:string}[]>('/localhost:3000/content');
   }
 }
