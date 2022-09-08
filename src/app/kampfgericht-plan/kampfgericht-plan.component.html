@@ -2,7 +2,9 @@
 kampfgericht-plan works!
 </p>
 
-<div class = "testData" *ngFor=" let data of testData | async">
-<span>{{ data.Id }}</span>
-<span>{{ data.Text }}</span>
+<div class = "testData" *ngFor=" let post of posts | async">
+  {{post|json}}
+  <!--
+<span>{{ data.Id| json }}</span>
+<span>{{ data.Text }}</span>-->
 </div>

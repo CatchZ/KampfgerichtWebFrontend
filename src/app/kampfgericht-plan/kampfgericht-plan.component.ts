@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService} from '../data.service';
-import {Observable} from 'rxjs';
-
+//import { DataService} from '../data.service';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-kampfgericht-plan',
   templateUrl: './kampfgericht-plan.component.html',
-  styleUrls: ['./kampfgericht-plan.component.css']
+  styleUrls: ['./kampfgericht-plan.component.css'],
 })
 export class KampfgerichtPlanComponent implements OnInit {
-  testData!  :Observable<{Id:number,Text:string}[]>;
+  testData!: Observable<{ Id: number; Text: string }[]>;
+  posts: any;
   //injecting des Clients
-  constructor(private dataService:DataService) { }
+  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/posts/1';
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-   
-   this.testData= this.dataService.getTestData();
+  getPosts() {
+    return this.http.get<{ Id: number; Text: string }[]>(this.ROOT_URL);
+    //return this.http.get<{Id:number;Text:string}[]>();
   }
-
-
-  
-
-
+  ngOnInit(): void {
+    // this.posts = this.dataService.getTestData();
+    // this.testData= this.dataService.getTestData();
+  }
 }
