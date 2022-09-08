@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService} from '../data.service';
+import {Observable} from 'rxjs';
 
 
 @Component({
@@ -8,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kampfgericht-plan.component.css']
 })
 export class KampfgerichtPlanComponent implements OnInit {
-
+  testData!  :Observable<{Id:number;Text:string}[]>;
   //injecting des Clients
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+   this.testData= this.dataService.getTestData();
   }
 
 

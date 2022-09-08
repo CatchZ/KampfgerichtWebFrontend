@@ -17,6 +17,8 @@ import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan
 @NgModule({
   imports: [
     BrowserModule,
+    //nutzung des http modul
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: LogInSiteComponent },
