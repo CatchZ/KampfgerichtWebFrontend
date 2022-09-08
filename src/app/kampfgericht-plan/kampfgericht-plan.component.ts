@@ -12,7 +12,7 @@ export class KampfgerichtPlanComponent implements OnInit {
   testData!: Observable<{ Id: number; Text: string }[]>;
   posts: any;
   //injecting des Clients
-  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/posts/1';
+  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/posts/1/comments';
   constructor(private http: HttpClient) {}
 
   getPosts() {
