@@ -1,8 +1,8 @@
 <p>
 kampfgericht-plan works!
 </p>
-
-<div class = "testData" *ngFor=" let post of posts | async">
+<button (click)="getPosts()"></button>
+<div *ngFor=" let post of posts | async">
   {{post|json}}
   <!--
 <span>{{ data.Id| json }}</span>

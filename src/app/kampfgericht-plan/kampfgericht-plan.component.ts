@@ -16,7 +16,7 @@ export class KampfgerichtPlanComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   getPosts() {
-    return this.http.get<{ Id: number; Text: string }[]>(this.ROOT_URL);
+   this.posts= this.http.get<{ Id: number; Text: string }[]>(this.ROOT_URL);
     //return this.http.get<{Id:number;Text:string}[]>();
   }
   ngOnInit(): void {
