@@ -32,7 +32,7 @@ import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan
     TopBarComponent,
     KampfgerichtPlanSiteComponent,
     LogInComponent,
-    KampfgerichtPlanComponent
+    KampfgerichtPlanComponent,
   ],
   bootstrap: [AppComponent],
 })

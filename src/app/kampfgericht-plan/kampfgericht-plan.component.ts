@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./kampfgericht-plan.component.css']
 })
 export class KampfgerichtPlanComponent implements OnInit {
-  testData!  :Observable<{Id:number;Text:string}[]>;
+  testData!  :Observable<{Id:number,Text:string}[]>;
   //injecting des Clients
   constructor(private dataService:DataService) { }
 
