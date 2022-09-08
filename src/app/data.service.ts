@@ -6,6 +6,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getTestData(){
-    return this.http.get<{Id:number;Text:string}[]>(http://localhost:3000/content);
+    return this.http.get<{Id:number;Text:string}[]>('http://localhost:3000/content');
   }
 }
