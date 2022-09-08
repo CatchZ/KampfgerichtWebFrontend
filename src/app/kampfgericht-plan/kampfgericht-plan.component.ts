@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-kampfgericht-plan',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KampfgerichtPlanComponent implements OnInit {
 
-  constructor() { }
+  //injecting des Clients
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }

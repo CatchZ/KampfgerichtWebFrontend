@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//nutzen des http client
+import { HttpClientModule } from '@angular/common/http';
 //nutzen von Router
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
