@@ -15,4 +15,10 @@ export class KampfgerichtPlanComponent implements OnInit {
   ngOnInit() {
   }
 
+  getTest(){
+    return this.http.get('http://localhost:3000/content');
+  }
+  
+
+
 }
