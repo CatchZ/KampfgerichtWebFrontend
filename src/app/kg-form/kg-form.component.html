@@ -3,9 +3,17 @@ kg-form works!
 </p>
 
   <div>
-    <label for="name">Name: </label>
+    <form>
+    <div>
+    <label for="date">Name: </label>
     <!--Form Kontroll wird das erste mal aufgerufen und an da name inputelement gebunden-->
-    <input id="name" type="text" [formControl]="name">
+    <input id="date" type="datetime-local" [formControl]="date" required   > 
     <!-- zugriff auf aktuelle feld in html-->
-    <p>Value: {{ name.value }}</p>
+    <p>Value: {{ date.value }}</p>
+    </div>
+     <input type="submit" value="Submit">
+    <div>
+
+    </div>
+  </form>
   </div>

@@ -8,8 +8,16 @@ import { FormControl } from '@angular/forms';
 export class KgFormComponent implements OnInit {
   // kg form wird damit der Host von Formkontroll und kriegt den startwert ''
   // legt fest unter welchen namen es später ans html gebunden werden kann
-  name = new FormControl('');
+  date = new FormControl('');
   constructor() { }
+
+  sendNewDate(){
+    // const date = document.getElementById("date"); vanilla js
+    //angular feature 
+    const date = this.date.value
+
+    
+  }
 
   ngOnInit() {
   }
