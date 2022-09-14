@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 //nutzen des http client
 import { HttpClientModule } from '@angular/common/http';
-
+//um reactive forms erzeugen zu können
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { LogInSiteComponent } from './log-in-site/log-in-site.component';
@@ -13,6 +14,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { KampfgerichtPlanSiteComponent } from './kampfgericht-plan-site/kampfgericht-plan-site.component';
 import { LogInComponent } from './log-in/log-in.component';
 import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan.component';
+import { KgFormComponent } from './kg-form/kg-form.component';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan
     //nutzung des http modul
     HttpClientModule,
     FormsModule,
+    //das auf Form Module zugegriffen werden kann
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: LogInSiteComponent },
       { path: 'kampfgerichtPlan', component: KampfgerichtPlanSiteComponent },
@@ -33,6 +37,7 @@ import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan
     KampfgerichtPlanSiteComponent,
     LogInComponent,
     KampfgerichtPlanComponent,
+    KgFormComponent
   ],
   bootstrap: [AppComponent],
 })
