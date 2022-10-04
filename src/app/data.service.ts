@@ -12,9 +12,9 @@ export class DataService {
 
 
   getTestData() {
-   // return this.http.get<{ Id: number, Text: string }[]>(
-     // '/assets/testData.json'
-    //);
-   //return this.http.get<{Id:number;Text:string}[]>();
+   return this.http.get<{ Id: number, Text: string }[]>(
+    '/assets/testData.json'
+    );
+
   }
 }
