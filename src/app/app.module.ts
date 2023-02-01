@@ -12,11 +12,9 @@ import { HelloComponent } from './hello.component';
 import { LogInSiteComponent } from './log-in-site/log-in-site.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { KampfgerichtPlanSiteComponent } from './kampfgericht-plan-site/kampfgericht-plan-site.component';
-import { LogInComponent } from './log-in/log-in.component';
 import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan.component';
 import { KgFormComponent } from './kg-form/kg-form.component';
-import { RegisterComponent } from './auth/components/register/register.component';
-import { LoginComponent } from './auth/components/login/login.component';
+
 
 
 
@@ -34,8 +32,7 @@ import { LoginComponent } from './auth/components/login/login.component';
     RouterModule.forRoot([
       { path: '', component: LogInSiteComponent },
       { path: 'kampfgerichtPlan', component: KampfgerichtPlanSiteComponent },
-      {path: 'login', component: LoginComponent },
-      {path: 'register',component: RegisterComponent },
+
      
     ]),
   ],
@@ -45,7 +42,6 @@ import { LoginComponent } from './auth/components/login/login.component';
     LogInSiteComponent,
     TopBarComponent,
     KampfgerichtPlanSiteComponent,
-    LogInComponent,
     KampfgerichtPlanComponent,
     KgFormComponent,
   ],
