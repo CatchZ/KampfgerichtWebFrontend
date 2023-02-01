@@ -15,9 +15,16 @@ import { KampfgerichtPlanSiteComponent } from './kampfgericht-plan-site/kampfger
 import { LogInComponent } from './log-in/log-in.component';
 import { KampfgerichtPlanComponent } from './kampfgericht-plan/kampfgericht-plan.component';
 import { KgFormComponent } from './kg-form/kg-form.component';
+import { RegisterComponent } from './auth/components/register/register.component';
+import { LoginComponent } from './auth/components/login/login.component';
+
+
+
 
 @NgModule({
   imports: [
+// login guid
+  
     BrowserModule,
     //nutzung des http modul
     HttpClientModule,
@@ -27,6 +34,9 @@ import { KgFormComponent } from './kg-form/kg-form.component';
     RouterModule.forRoot([
       { path: '', component: LogInSiteComponent },
       { path: 'kampfgerichtPlan', component: KampfgerichtPlanSiteComponent },
+      {path: 'login', component: LoginComponent },
+      {path: 'register',component: RegisterComponent },
+     
     ]),
   ],
   declarations: [
@@ -37,7 +47,7 @@ import { KgFormComponent } from './kg-form/kg-form.component';
     KampfgerichtPlanSiteComponent,
     LogInComponent,
     KampfgerichtPlanComponent,
-    KgFormComponent
+    KgFormComponent,
   ],
   bootstrap: [AppComponent],
 })
